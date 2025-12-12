@@ -28,3 +28,19 @@
 	- Store/download images
 	- Create containers
 - Registry stores images
+
+
+### Overlay FS
+
+- An image is composed of **many layers**
+- Each layer is a directory in /var/lib/docker/overlay2
+- The container directory is composed by all layer directories.
+	- Note that the highest/newest layer dir has preference
+- Each layer has a reference to previous layer (father layer)
+	- **lower**: symbolic link that indicates the father layer
+	- **diff**: indicates the difference between the layer and it father layer
+
+
+### Logs
+
+- On Cloud Native applications the logs should be send to stdout, processed by a Log Aggregator and stored
