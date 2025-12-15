@@ -4,6 +4,7 @@
 - **docker images**: lists all stored images
 - **docker pull *image_name:version***: brings image to docker host
 - **docker image inspect *image_name:version***: gets image information
+- **docker build Dockerfile**: builds the image
 
 
 ### Containers
